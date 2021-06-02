@@ -1,0 +1,364 @@
+:root {
+	--highlight-color: #d71343;
+	--accent-color: #13bed7;
+	--midtone-color: #2d2d2d;
+}
+
+body, html {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	scroll-behavior: smooth;
+	margin: 0;
+	font-family: "geo";
+	color: white;
+}
+
+.highlight {
+	color: var(--highlight-color);
+}
+
+.midtone {
+	color: var(--midtone-color);
+}
+
+.color-grey {
+	color: grey;
+}
+
+.float-right {
+	float: right;
+}
+
+.pos-fix {
+	position: fixed;
+}
+
+.pos-abs {
+	position: absolute;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.display-grid {
+	display: grid;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.display-none {
+	display: none;
+}
+
+.visibility-hidden {
+	visibility: hidden;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-align-center {
+	align-items: center;
+}
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+.bottom-0 {
+	bottom: 0;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.right-0 {
+	right: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.bg-black {
+	background-color: black;
+}
+
+.pad-5 {
+	padding: 5px;
+}
+
+.pad-20 {
+	padding: 20px;
+}
+
+.mg-20 {
+	margin: 20px;
+}
+
+.mg-48 {
+	margin: 48px;
+}
+
+.mg-y-128 {
+	margin: 128px 0;
+}
+
+.mg-y-15 {
+	margin: 15px 0;
+}
+
+.w-30-perc {
+	width: 30%;
+}
+
+.w-50-perc {
+	width: 50%;
+}
+.w-80-perc {
+	width: 80%;
+}
+
+.vert-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.horiz-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.center-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.ls-01-em {
+	letter-spacing: .1em;
+}
+
+.ls-05-em {
+	letter-spacing: .5em;
+}
+
+.mass-text {
+	font-family: 'Rajdhani', sans-serif;
+	/*font-family: 'Abel', sans-serif;*/
+}
+
+.text-geo {
+	font-family: 'Geo', sans-serif;
+}
+
+.text-abel {
+	font-family: 'Abel', sans-serif;
+}
+
+.text-major-mono {
+	font-family: 'Major Mono Display', monospace;
+}
+
+.font-size-03-em {
+	font-size: .3em;
+}
+
+.font-size-1-em {
+	font-size: 1em;
+}
+
+.font-size-2-em {
+	font-size: 2em;
+}
+
+.font-size-4-em {
+	font-size: 4em;
+}
+
+.full-screen {
+	width: 100vw;
+	height: 100vh;
+}
+
+.w20-screen {
+	width: 20vw;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.overflow-y-scroll {
+	overflow-y: scroll;
+}
+
+.white-text {
+	color: white;
+}
+
+.white-to-crimson-text {
+	color: white;
+}
+
+.white-to-crimson-text:hover {
+	color: var(--highlight-color);
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navigation {
+	width: 60%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 200;
+	overflow-y: scroll;
+	display: none;
+}
+
+.nav-item {
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 24px 0;
+	margin: 24px 0;
+	border-radius: 15px;
+	color: white;
+}
+
+.nav-item:hover {
+	color: var(--highlight-color);
+	background-color: rgba(0, 0, 0, .8);
+	cursor: pointer;
+}
+
+.navigation::-webkit-scrollbar {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-icon {
+	width: 48px;
+	height: 48px;
+	z-index: 200;
+	right: 48px;
+	top: 48px;
+	cursor: pointer;
+}
+
+.nav-icon-bar {
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 10%;
+}
+
+.nav-icon-anim {
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+.nav-icon-tb-anim {
+	animation-duration: 2s;
+}
+
+.nav-icon-mid-anim {
+	animation-duration: .6s;
+}
+
+.nav-icon-bar-top {
+	--offset: calc(-50% - 14px);
+	transform: translateY(var(--offset));
+	animation-name: cross-left;
+}
+
+.nav-icon-bar-mid {
+	transform: translateY(-50%);
+	animation-name: shrink-disappear;
+}
+
+.nav-icon-bar-bottom {
+	--offset: calc(-50% + 14px);
+	transform: translateY(var(--offset));
+	animation-name: cross-right;
+}
+
+.hover-expand:hover {
+	transform: scale(1.02, 1.02);
+}
+
+.hover-full-opacity:hover {
+	opacity: 1;
+}
+
+.active-shrink:active {
+	transform: scale(.98, .98);
+}
+
+@keyframes shrink-disappear {
+	from {
+		width: 100%;
+		margin-left: 0;
+	}
+	to {
+		width: 0;
+		margin-left: 50%;
+	}
+}
+
+@keyframes cross-left {
+	0% {
+		transform: translateY(calc(-50% - 14px));
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes cross-right {
+	0% {
+		transform: translateY(calc(-50% + 14px));
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(-45deg);
+	}
+}
+
